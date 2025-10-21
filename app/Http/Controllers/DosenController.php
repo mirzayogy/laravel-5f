@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dosen;
 use Illuminate\Http\Request;
 
 class DosenController extends Controller
@@ -11,7 +12,9 @@ class DosenController extends Controller
      */
     public function index()
     {
-
+        $banyak_dosen = Dosen::all();
+        // dd($banyak_dosen); // untuk melihat isi
+        return view('dosen.index', ['banyak_dosen' => $banyak_dosen]);
     }
 
     /**
