@@ -32,12 +32,11 @@ Dosen::create([
 ==> DatabaseSeeder.php
 $this->call(DosenSeeder::class);
 
-php artisan migrate:fresh --seed
+php artisan migrate:fresh // mengulang semua data
+php artisan migrate:fresh --seed // sda + memasukkan data dari DatabaseSeeder
+php artisan db:seed // memasukkan data dari semua DatabaseSeeder
+php artisan db:seed --class=MatakuliahSeeder // data dari semua Seeder 
 
 ==========================================================
 
-
-php artisan db:seed
-php artisan db:seed --class=UserSeeder
-php artisan migrate:fresh --seed
 
