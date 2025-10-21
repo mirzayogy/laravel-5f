@@ -1,11 +1,11 @@
 ## Laravel
-Membuat tabel baru dengan 
+- Membuat tabel baru dengan 
 php artisan make:migration create_dosen_table
 
-hasilnya:
+- hasilnya:
 database/migration/2025_xx_xx_xxxxxx_create_dosen_table.php
 
-ubah dulu isi filenya
+- ubah dulu isi filenya
 
 php artisan migrate
 
@@ -39,4 +39,6 @@ php artisan db:seed --class=MatakuliahSeeder // data dari semua Seeder
 
 ==========================================================
 
-
+- MVC = Model View Controller
+php artisan make:controller DosenController // kosongan
+php artisan make:controller DosenController --resource 
