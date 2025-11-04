@@ -53,17 +53,32 @@ class DosenController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Dosen $dosen)
     {
-        //
+        return view('dosen.edit',["dosen" => $dosen]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Dosen $dosen)
     {
-        //
+        $request->validate([
+            'nama_dosen' => 'required',
+            'nomor_induk_dosen' => 'required',
+            'gaji' => 'required',
+            'tanggal_lahir' => 'required',
+        ]);
+
+        // Dosen::create($data_tervalidasi);
+        $dosen->update([
+            'nama_dosen' => $request->nama_dosen,
+            'nomor_induk_dosen' => $request->nomor_induk_dosen,
+            'gaji' => $request->gaji,
+            'tanggal_lahir' => $request->tanggal_lahir,
+        ]);
+
+        return redirect('/dosen')->with('berhasil', 'Berhasil ubah data');
     }
 
     /**

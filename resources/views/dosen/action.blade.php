@@ -1,4 +1,4 @@
-<a href="#" class="btn btn-sm btn-primary">
+<a href="{{ route('dosen.edit', $dosen) }}" class="btn btn-sm btn-primary">
     Edit
 </a>
 <a href="#">

@@ -58,3 +58,9 @@ Route::resource('/dosen', DosenController::class);
 
 - Buat file create.blade.php
 
+==========================================================
+
+- Salin file create.blade.php menjadi edit.blade.php dan sesuaikan
+- Lengkapi DosenController.php pada method edit dan update
+
+==========================================================
