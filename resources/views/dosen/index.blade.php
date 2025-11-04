@@ -15,6 +15,11 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
+@if(session('berhasil'))
+    Data Berhasil Disimpan
+    <br>
+@endif
+<a href="{{ route("dosen.create") }}">Tambah Data</a>
 <table>
     <tr>
         <th>Id</th>

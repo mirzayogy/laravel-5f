@@ -41,4 +41,20 @@ php artisan db:seed --class=MatakuliahSeeder // data dari semua Seeder
 
 - MVC = Model View Controller
 php artisan make:controller DosenController // kosongan
-php artisan make:controller DosenController --resource 
+php artisan make:controller DosenController --resource
+
+- ganti di web.php
+Route::resource('/dosen', DosenController::class);
+
+- File DosenController.php
+- tambahkan pada method create dan store
+
+- File index.php tambahkan
+@if(session('berhasil'))
+    Data Berhasil Disimpan
+    <br>
+@endif
+<a href="{{ route("dosen.create") }}">Tambah Data</a>
+
+- Buat file create.blade.php
+

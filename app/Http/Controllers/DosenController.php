@@ -22,7 +22,7 @@ class DosenController extends Controller
      */
     public function create()
     {
-        //
+        return view('dosen.create');
     }
 
     /**
@@ -30,7 +30,16 @@ class DosenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data_tervalidasi = $request->validate([
+            'nama_dosen' => 'required',
+            'nomor_induk_dosen' => 'required',
+            'gaji' => 'required',
+            'tanggal_lahir' => 'required',
+        ]);
+
+        Dosen::create($data_tervalidasi);
+
+        return redirect('/dosen')->with('berhasil','Berhasil tambah data');
     }
 
     /**

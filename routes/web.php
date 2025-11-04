@@ -7,4 +7,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dosen', [DosenController::class, 'index']);
+Route::resource('/dosen', DosenController::class);
