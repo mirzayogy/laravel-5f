@@ -28,9 +28,27 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item active">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="/">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/dosen">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Dosen</span></a>
+    </li>
+
+     <li class="nav-item">
+        <a class="nav-link" href="/halaman1">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Halaman 1</span></a>
+    </li>
+
+     <li class="nav-item">
+        <a class="nav-link" href="/halaman2">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Halaman 2</span></a>
     </li>
 
     <!-- Divider -->
