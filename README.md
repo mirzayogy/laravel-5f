@@ -89,3 +89,9 @@ Mahasiswa::create([
 - pada DatabaseSeeder.php tambahkan 
 $this->call(MahasiswaSeeder::class);
 
+php artisan db:seed
+
+Run:
+php artisan make:model Prodi -mcrs
+
+lanjutkan seperti diatas
