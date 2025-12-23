@@ -64,3 +64,14 @@ Route::resource('/dosen', DosenController::class);
 - Lengkapi DosenController.php pada method edit dan update
 
 ==========================================================
+Run:
+php artisan make:model Mahasiswa -mcrs
+
+- membuat model, migration, controller, resource, seeder
+- ganti nama tabel di migration
+- isi migration-nya
+- isi model dengan nama_tabel dan $guarded = []
+
+==========================================================
+
+
