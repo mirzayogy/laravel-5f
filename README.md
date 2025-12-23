@@ -69,9 +69,23 @@ php artisan make:model Mahasiswa -mcrs
 
 - membuat model, migration, controller, resource, seeder
 - ganti nama tabel di migration
+- jalankan php artisan migrate
 - isi migration-nya
 - isi model dengan nama_tabel dan $guarded = []
 
 ==========================================================
+Membuat Seeder
 
+- isi di MahasiswaSeeder.php
+
+Mahasiswa::create([
+    'npm' => '0001',
+    'nama_mahasiswa' => 'Ahmad',
+    'tanggal_lahir' => '2000-05-01',
+    'prodi_id' => 1,
+]);
+
+
+- pada DatabaseSeeder.php tambahkan 
+$this->call(MahasiswaSeeder::class);
 
