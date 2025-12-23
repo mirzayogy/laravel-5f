@@ -39,6 +39,12 @@
             <span>Dosen</span></a>
     </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="/mahasiswa">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Mahasiswa</span></a>
+    </li>
+
      <li class="nav-item">
         <a class="nav-link" href="/halaman1">
             <i class="fas fa-fw fa-table"></i>

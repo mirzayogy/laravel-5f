@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/dosen', DosenController::class);
+Route::resource('/mahasiswa', MahasiswaController::class);
 
 Route::get('/halaman1', function () {
     return view('halaman.halaman1');

@@ -5,38 +5,38 @@
         <br>
     @endif
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dosen</h1>
-        <a href="{{ route('dosen.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
+        <h1 class="h3 mb-0 text-gray-800">Mahasiswa</h1>
+        <a href="{{ route('mahasiswa.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
             <i class="fas fa-plus fa-sm text-white-50"></i> Tambah
         </a>
     </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Data Dosen</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Data Mahasiswa</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <th>ID</th>
+                        <th>NPM</th>
                         <th>Nama</th>
-                        <th>NIDN</th>
-                        <th>Gaji</th>
                         <th>Tanggal Lahir</th>
+                        <th>Prodi ID</th>
                         <th>Opsi</th>
                     </thead>
                     <tbody>
-                        @foreach ($banyak_dosen as $dosen)
+                        @foreach ($banyak_mahasiswa as $mahasiswa)
                             <tr>
-                                <td>{{ $dosen['id'] }}</td>
-                                <td>{{ $dosen['nama_dosen'] }}</td>
-                                <td>{{ $dosen['nomor_induk_dosen'] }}</td>
-                                <td>{{ $dosen['gaji'] }}</td>
-                                <td>{{ $dosen['tanggal_lahir'] }}</td>
+                                <td>{{ $mahasiswa['id'] }}</td>
+                                <td>{{ $mahasiswa['npm'] }}</td>
+                                <td>{{ $mahasiswa['nama_mahasiswa'] }}</td>
+                                <td>{{ $mahasiswa['tanggal_lahir'] }}</td>
+                                <td>{{ $mahasiswa['prodi_id'] }}</td>
                                 <td style="align-items: center">
-                                    <a href="{{ route('dosen.edit', $dosen) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit</a>
+                                    <a href="{{ route('mahasiswa.edit', $mahasiswa) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit</a>
                                     <button class="btn btn-danger btn-sm"
-                                        onclick="konfirmasi('{{ route('dosen.destroy', $dosen) }}')"><i class="fa fa-trash"></i> Hapus</button>
+                                        onclick="konfirmasi('{{ route('mahasiswa.destroy', $mahasiswa) }}')"><i class="fa fa-trash"></i> Hapus</button>
                                 </td>
                             </tr>
                         @endforeach
