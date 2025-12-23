@@ -12,7 +12,10 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        $banyak_mahasiswa = Mahasiswa::all();
+        // $banyak_mahasiswa = Mahasiswa::all();
+        $banyak_mahasiswa = Mahasiswa::with('prodi')->get();
+        // dd($banyak_mahasiswa);
+
         return view('mahasiswa.index', ['banyak_mahasiswa' => $banyak_mahasiswa]);
     }
 

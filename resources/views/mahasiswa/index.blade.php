@@ -32,7 +32,7 @@
                                 <td>{{ $mahasiswa['npm'] }}</td>
                                 <td>{{ $mahasiswa['nama_mahasiswa'] }}</td>
                                 <td>{{ $mahasiswa['tanggal_lahir'] }}</td>
-                                <td>{{ $mahasiswa['prodi_id'] }}</td>
+                                <td>{{ $mahasiswa->prodi->nama_prodi }}</td>
                                 <td style="align-items: center">
                                     <a href="{{ route('mahasiswa.edit', $mahasiswa) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit</a>
                                     <button class="btn btn-danger btn-sm"
